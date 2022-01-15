@@ -177,6 +177,12 @@ section .title::after {
 .about .title::after {
   content: "who i am";
 }
+.project .title::before {
+  background: #fff;
+}
+.blog .title::before {
+  background: #fff;
+}
 .about .about-content,
 .project .project-content {
   display: flex;
@@ -304,6 +310,33 @@ section .title::after {
 .project .project-content .card:hover .text {
   color: #fff;
 }
+
+.blog {
+  background-color: gray;
+}
+.blog .title {
+  color: #fff;
+}
+.blog .blog-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: rgb(219, 213, 213);
+}
+.blog .blog-content img {
+  width: 200px;
+  height: auto;
+}
+.blog .blog-content .text {
+  margin: 0 0 20px 50px;
+  font-size: 30px;
+}
+.blog .blog-content p {
+  margin: 0 50px;
+  text-align: justify;
+}
+
 /* responsive media start */
 @media (max-width: 1300px) {
   .home .max-width {
