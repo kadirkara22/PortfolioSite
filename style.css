@@ -132,10 +132,11 @@
 section {
   padding: 100px 0;
 }
-.about {
+.about,
+.project {
   font-family: "Poppins", sans-serif;
 }
-.about .title {
+section .title {
   position: relative;
   text-align: center;
   font-size: 40px;
@@ -144,7 +145,7 @@ section {
   padding-bottom: 20px;
   font-family: "Ubuntu", sans-serif;
 }
-.about .title::before {
+section .title::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -159,8 +160,7 @@ section {
   -o-transform: translateX(-50%);
 }
 
-.about .title::after {
-  content: "who i am";
+section .title::after {
   position: absolute;
   bottom: -12px;
   left: 50%;
@@ -174,7 +174,11 @@ section {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
-.about .about-content {
+.about .title::after {
+  content: "who i am";
+}
+.about .about-content,
+.project .project-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -230,6 +234,76 @@ section {
   background: none;
 }
 
+/* Projects*/
+
+.project {
+  color: #fff;
+  background: #111;
+}
+.project .project-content .card {
+  width: calc(33% - 20px);
+  background: #222;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.project .project-content .card:hover {
+  background: crimson;
+}
+.project .project-content .card .box {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.project .project-content .card:hover .box {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+}
+.project .project-content .card .projectLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.project .project-content .card a {
+  font-size: 30px;
+  color: crimson;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+
+.project .project-content .card:hover a {
+  color: #fff;
+}
+
+.project .project-content .card .text {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+  color: crimson;
+}
+.project .project-content .card:hover .text {
+  color: #fff;
+}
 /* responsive media start */
 @media (max-width: 1300px) {
   .home .max-width {
@@ -313,6 +387,10 @@ section {
   .about .about-content .right {
     flex: 100%;
   }
+  .project .project-content .card {
+    width: calc(50%-10px);
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 690px) {
@@ -327,6 +405,9 @@ section {
   }
   .home .home-content a {
     font-size: 20px;
+  }
+  .project .project-content .card {
+    width: 100%;
   }
 }
 @media (max-width: 500px) {
