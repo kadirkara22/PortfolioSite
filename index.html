@@ -13,24 +13,34 @@
       crossorigin="anonymous"
     />
     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+      integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
       src="https://kit.fontawesome.com/a076d05399.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
+    <div class="scroll-up-btn">
+      <i class="fas fa-angle-up"></i>
+    </div>
+
     <!---Navbar start-->
     <nav class="navbar">
       <div class="max-width">
         <div class="logo">
-          <a href="#">Portfo<span>lio.</span></a>
+          <a href="home">Portfo<span>lio.</span></a>
         </div>
         <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="menu-btn">
           <i class="fa fa-bars"></i>
@@ -44,7 +54,7 @@
         <div class="home-content">
           <div class="text-1">Hello, my name is</div>
           <div class="text-2">Kadir Kara</div>
-          <div class="text-3">And I' m a <span>Web Developer</span></div>
+          <div class="text-3">And I' m a <span class="typing"></span></div>
           <a href="#">Hire me</a>
         </div>
       </div>
@@ -60,7 +70,7 @@
           </div>
           <div class="column right">
             <div class="text">
-              I'm Kadir and I'm a <span>FrontEnd Developer</span>
+              I'm Kadir and I'm a <span class="typing-2"></span>
             </div>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas
